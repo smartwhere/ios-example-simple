@@ -27,9 +27,9 @@
     
     /* instantiate the _smartwhere object passing in your Application Id, API Key and API secret along with the configuration */
     _smartwhere = [[SmartWhere alloc]
-                   initWithAppId:@"22"
-                   apiKey:@"100015"
-                   apiSecret:@"4becdowu7pp"
+                   initWithAppId:@"xxxx"
+                   apiKey:@"xxxxxxxx"
+                   apiSecret:@"xxxxxxxx"
                    withConfig: dict];
     
     // set the smartwhere delegate 
