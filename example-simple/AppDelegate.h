@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <SmartWhere/SmartWhere.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
+
 @property (strong, nonatomic) UIWindow *window;
+@property (readonly) SmartWhere * smartwhere;
 
 
 @end

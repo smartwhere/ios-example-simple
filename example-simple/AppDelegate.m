@@ -8,38 +8,75 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate ()
-
+@interface AppDelegate () <SmartWhereDelegate>
 @end
 
-@implementation AppDelegate
+@implementation AppDelegate {
+    SWNotification * _lastEvent;
+}
 
+
+#pragma mark - Application Delegate methods
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    // Read NSDictionary from SmartwhereConfig.plist to get custom settings
+    
+    NSString* plistPath = [[NSBundle mainBundle] pathForResource:@"SmartwhereConfig" ofType:@"plist"];
+    NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
+    
+    /* instantiate the _smartwhere object passing in your Application Id, API Key and API secret along with the configuration */
+    _smartwhere = [[SmartWhere alloc]
+                   initWithAppId:@"22"
+                   apiKey:@"100015"
+                   apiSecret:@"4becdowu7pp"
+                   withConfig: dict];
+    
+    // set the smartwhere delegate 
+    _smartwhere.delegate = self;
     return YES;
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+    // require for processing proximity notifications
+    [_smartwhere didReceiveLocalNotification:notification];
+    
 }
+
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    [_smartwhere applicationDidEnterBackground];
 }
 
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-}
+
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+
+    [_smartwhere applicationDidBecomeActive];
 }
 
-- (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+#pragma mark - SmartWhere delegates
+
+- (void)smartWhere:(SmartWhere *)smartwhere didReceiveLocalNotification:(SWNotification *)notification {
+    
+    NSLog(@"SWNotification came in while in the foreground, alerting the user");
+    _lastEvent = notification;
+
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:notification.title message:notification.message delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil];
+    [alert addButtonWithTitle:@"Ok"];
+    [alert show];
 }
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    if ([alertView cancelButtonIndex] != buttonIndex && _lastEvent) {
+        [_smartwhere fireLocalNotificationAction:_lastEvent];
+
+    }
+    
+    _lastEvent = nil;
+}
+
+
+
 
 @end
