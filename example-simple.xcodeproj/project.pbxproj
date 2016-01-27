@@ -17,6 +17,7 @@
 		BF5395BD1C56CB7500F1326A /* example_simpleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5395BC1C56CB7500F1326A /* example_simpleUITests.m */; };
 		BF5395CB1C56D0FB00F1326A /* SmartWhere.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF5395CA1C56D0FB00F1326A /* SmartWhere.framework */; };
 		BF5395CD1C56DC7200F1326A /* SmartwhereConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF5395CC1C56DC7200F1326A /* SmartwhereConfig.plist */; };
+		BF7759A71C59509000603AE5 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = BF7759A61C59509000603AE5 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		BF5395BE1C56CB7500F1326A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF5395CA1C56D0FB00F1326A /* SmartWhere.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SmartWhere.framework; sourceTree = "<group>"; };
 		BF5395CC1C56DC7200F1326A /* SmartwhereConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SmartwhereConfig.plist; sourceTree = "<group>"; };
+		BF7759A61C59509000603AE5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		BF53958B1C56CB7400F1326A = {
 			isa = PBXGroup;
 			children = (
+				BF7759A61C59509000603AE5 /* README.md */,
 				BF5395CA1C56D0FB00F1326A /* SmartWhere.framework */,
 				BF5395961C56CB7400F1326A /* example-simple */,
 				BF5395B01C56CB7400F1326A /* example-simpleTests */,
@@ -280,6 +283,7 @@
 			files = (
 				BF53959F1C56CB7400F1326A /* ViewController.m in Sources */,
 				BF53959C1C56CB7400F1326A /* AppDelegate.m in Sources */,
+				BF7759A71C59509000603AE5 /* README.md in Sources */,
 				BF5395991C56CB7400F1326A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -518,6 +522,7 @@
 				BF5395C31C56CB7500F1326A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BF5395C41C56CB7500F1326A /* Build configuration list for PBXNativeTarget "example-simpleTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +531,7 @@
 				BF5395C61C56CB7500F1326A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BF5395C71C56CB7500F1326A /* Build configuration list for PBXNativeTarget "example-simpleUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +540,7 @@
 				BF5395C91C56CB7500F1326A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
