@@ -6,5 +6,7 @@ This iOS project represents a very simple implementation of the Smartwhere Proxi
 
 
 Related links
+
 [Smartwhere Web Manager](https://manager.smartwhere.com)
+
 [Smartwhere developer site](https://smartwhere.com/developer)

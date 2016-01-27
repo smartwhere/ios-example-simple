@@ -18,6 +18,7 @@
 		BF5395CB1C56D0FB00F1326A /* SmartWhere.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF5395CA1C56D0FB00F1326A /* SmartWhere.framework */; };
 		BF5395CD1C56DC7200F1326A /* SmartwhereConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF5395CC1C56DC7200F1326A /* SmartwhereConfig.plist */; };
 		BF7759A71C59509000603AE5 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = BF7759A61C59509000603AE5 /* README.md */; };
+		BF7759B31C5988CC00603AE5 /* smartwhere_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BF7759B21C5988CC00603AE5 /* smartwhere_logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		BF5395CA1C56D0FB00F1326A /* SmartWhere.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SmartWhere.framework; sourceTree = "<group>"; };
 		BF5395CC1C56DC7200F1326A /* SmartwhereConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SmartwhereConfig.plist; sourceTree = "<group>"; };
 		BF7759A61C59509000603AE5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		BF7759B21C5988CC00603AE5 /* smartwhere_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smartwhere_logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 		BF5395971C56CB7400F1326A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BF7759B21C5988CC00603AE5 /* smartwhere_logo.png */,
 				BF5395981C56CB7400F1326A /* main.m */,
 			);
 			name = "Supporting Files";
@@ -254,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF5395CD1C56DC7200F1326A /* SmartwhereConfig.plist in Resources */,
+				BF7759B31C5988CC00603AE5 /* smartwhere_logo.png in Resources */,
 				BF5395A71C56CB7400F1326A /* LaunchScreen.storyboard in Resources */,
 				BF5395A41C56CB7400F1326A /* Assets.xcassets in Resources */,
 				BF5395A21C56CB7400F1326A /* Main.storyboard in Resources */,
