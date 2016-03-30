@@ -61,29 +61,27 @@
     
     NSLog(@"SWNotification came in while in the foreground, alerting the user");
     _lastEvent = notification;
-    UIAlertController *controller = [UIAlertController alertControllerWithTitle: notification.title
-                                                                        message: notification.message
-                                                                 preferredStyle: UIAlertControllerStyleAlert];
+    
+    /* display notification with a simple UIAlertController */
+    UIAlertController *alertcontroller = [UIAlertController alertControllerWithTitle: notification.title
+                                                                             message: notification.message
+                                                                      preferredStyle: UIAlertControllerStyleAlert];
     UIAlertAction *okAction = [UIAlertAction actionWithTitle: @"Ok"
-                    style: UIAlertActionStyleDefault
-                    handler: ^(UIAlertAction *action) {
-                            if (_lastEvent) {
-                                [_smartwhere fireLocalNotificationAction:_lastEvent];
-                                                                
-                            }
-                            _lastEvent = nil;
-                    }];
-    [controller addAction: okAction];
+                                                       style: UIAlertActionStyleDefault
+                                                     handler: ^(UIAlertAction *action) {
+                                                         if (_lastEvent) [_smartwhere fireLocalNotificationAction:_lastEvent];
+                                                         _lastEvent = nil;
+                                                     }];
+    [alertcontroller addAction: okAction];
     
     UIAlertAction *cancel = [UIAlertAction actionWithTitle: @"Cancel" style: UIAlertActionStyleDestructive handler: nil];
-    [controller addAction: cancel];
+    [alertcontroller addAction: cancel];
     
     UINavigationController *navigationController = (UINavigationController *) self.window.rootViewController;
     
     [self.window setRootViewController:navigationController];
     
-    [navigationController presentViewController:controller animated:YES completion:nil];
-
+    [navigationController presentViewController:alertcontroller animated:YES completion:nil];
 }
 
 
