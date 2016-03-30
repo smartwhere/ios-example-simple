@@ -27,9 +27,9 @@
     
     /* instantiate the _smartwhere object passing in your Application Id, API Key and API secret along with the configuration */
     _smartwhere = [[SmartWhere alloc]
-                   initWithAppId:@"xxxx"
-                   apiKey:@"xxxxxxxx"
-                   apiSecret:@"xxxxxxxx"
+                   initWithAppId:@"XXXXXX"
+                   apiKey:@"XXXXXX"
+                   apiSecret:@"XXXXXX"
                    withConfig: dict];
     
     // set the smartwhere delegate 
@@ -61,20 +61,31 @@
     
     NSLog(@"SWNotification came in while in the foreground, alerting the user");
     _lastEvent = notification;
-
-    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:notification.title message:notification.message delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil];
-    [alert addButtonWithTitle:@"Ok"];
-    [alert show];
-}
-
-- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
-    if ([alertView cancelButtonIndex] != buttonIndex && _lastEvent) {
-        [_smartwhere fireLocalNotificationAction:_lastEvent];
-
-    }
+    UIAlertController *controller = [UIAlertController alertControllerWithTitle: notification.title
+                                                                        message: notification.message
+                                                                 preferredStyle: UIAlertControllerStyleAlert];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle: @"Ok"
+                    style: UIAlertActionStyleDefault
+                    handler: ^(UIAlertAction *action) {
+                            if (_lastEvent) {
+                                [_smartwhere fireLocalNotificationAction:_lastEvent];
+                                                                
+                            }
+                            _lastEvent = nil;
+                    }];
+    [controller addAction: okAction];
     
-    _lastEvent = nil;
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle: @"Cancel" style: UIAlertActionStyleDestructive handler: nil];
+    [controller addAction: cancel];
+    
+    UINavigationController *navigationController = (UINavigationController *) self.window.rootViewController;
+    
+    [self.window setRootViewController:navigationController];
+    
+    [navigationController presentViewController:controller animated:YES completion:nil];
+
 }
+
 
 
 
