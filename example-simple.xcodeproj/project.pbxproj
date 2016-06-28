@@ -16,9 +16,13 @@
 		BF5395B21C56CB7400F1326A /* example_simpleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5395B11C56CB7400F1326A /* example_simpleTests.m */; };
 		BF5395BD1C56CB7500F1326A /* example_simpleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5395BC1C56CB7500F1326A /* example_simpleUITests.m */; };
 		BF5395CD1C56DC7200F1326A /* SmartwhereConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF5395CC1C56DC7200F1326A /* SmartwhereConfig.plist */; };
+		BF5585E51CAC4C4600ADF449 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF5585E41CAC4C4600ADF449 /* CoreBluetooth.framework */; };
+		BF5585E71CAC4C4F00ADF449 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF5585E61CAC4C4F00ADF449 /* CoreLocation.framework */; };
+		BF5585E91CAC4C5600ADF449 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF5585E81CAC4C5600ADF449 /* SystemConfiguration.framework */; };
+		BF5585EB1CAC4C5D00ADF449 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF5585EA1CAC4C5D00ADF449 /* AdSupport.framework */; };
 		BF7759A71C59509000603AE5 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = BF7759A61C59509000603AE5 /* README.md */; };
 		BF7759B31C5988CC00603AE5 /* smartwhere_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BF7759B21C5988CC00603AE5 /* smartwhere_logo.png */; };
-		BF7759B51C598D7800603AE5 /* SmartWhere.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7759B41C598D7800603AE5 /* SmartWhere.framework */; };
+		BFE390581D22FDE00044E74A /* SmartWhere.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFE390571D22FDE00044E74A /* SmartWhere.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,9 +60,13 @@
 		BF5395BC1C56CB7500F1326A /* example_simpleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = example_simpleUITests.m; sourceTree = "<group>"; };
 		BF5395BE1C56CB7500F1326A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF5395CC1C56DC7200F1326A /* SmartwhereConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SmartwhereConfig.plist; sourceTree = "<group>"; };
+		BF5585E41CAC4C4600ADF449 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		BF5585E61CAC4C4F00ADF449 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		BF5585E81CAC4C5600ADF449 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		BF5585EA1CAC4C5D00ADF449 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		BF7759A61C59509000603AE5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BF7759B21C5988CC00603AE5 /* smartwhere_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smartwhere_logo.png; sourceTree = "<group>"; };
-		BF7759B41C598D7800603AE5 /* SmartWhere.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SmartWhere.framework; sourceTree = "<group>"; };
+		BFE390571D22FDE00044E74A /* SmartWhere.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SmartWhere.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +74,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF7759B51C598D7800603AE5 /* SmartWhere.framework in Frameworks */,
+				BF5585EB1CAC4C5D00ADF449 /* AdSupport.framework in Frameworks */,
+				BFE390581D22FDE00044E74A /* SmartWhere.framework in Frameworks */,
+				BF5585E91CAC4C5600ADF449 /* SystemConfiguration.framework in Frameworks */,
+				BF5585E71CAC4C4F00ADF449 /* CoreLocation.framework in Frameworks */,
+				BF5585E51CAC4C4600ADF449 /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,8 +102,12 @@
 		BF53958B1C56CB7400F1326A = {
 			isa = PBXGroup;
 			children = (
-				BF7759B41C598D7800603AE5 /* SmartWhere.framework */,
+				BF5585EA1CAC4C5D00ADF449 /* AdSupport.framework */,
+				BF5585E81CAC4C5600ADF449 /* SystemConfiguration.framework */,
+				BF5585E61CAC4C4F00ADF449 /* CoreLocation.framework */,
+				BF5585E41CAC4C4600ADF449 /* CoreBluetooth.framework */,
 				BF7759A61C59509000603AE5 /* README.md */,
+				BFE390571D22FDE00044E74A /* SmartWhere.framework */,
 				BF5395961C56CB7400F1326A /* example-simple */,
 				BF5395B01C56CB7400F1326A /* example-simpleTests */,
 				BF5395BB1C56CB7500F1326A /* example-simpleUITests */,
@@ -220,6 +236,7 @@
 				TargetAttributes = {
 					BF5395931C56CB7400F1326A = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 5FDK6YU2VY;
 					};
 					BF5395AC1C56CB7400F1326A = {
 						CreatedOnToolsVersion = 7.2;
@@ -433,6 +450,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -441,6 +460,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.smartwhere.example-simple";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -448,6 +468,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -456,6 +478,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.smartwhere.example-simple";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

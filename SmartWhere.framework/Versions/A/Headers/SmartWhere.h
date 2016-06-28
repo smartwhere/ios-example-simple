@@ -55,12 +55,18 @@ typedef void (^SWValidateScanCallBack)(SWTag* tag, NSError* err);
 - (NSDictionary*)fireLocalNotificationAction:(SWNotification*)notification;
 
 // manipulate user values used for condition processing
+- (void)clearUserAttributes;
+- (NSDictionary*) getUserAttributes;
+- (void)setUserAttributes:(NSDictionary*) attributes;
 - (void)setUserInteger:(NSInteger)value forKey:(NSString*)key;
 - (void)setUserString:(NSString*)value forKey:(NSString*)key;
 - (void)removeUserValueForKey:(NSString*)key;
 - (id)getUserValueForKey:(NSString*)key;
 
 // manipulate user values sent with the tracking
+- (void)clearUserTrackingAttributes;
+- (void)setUserTrackingAttributes:(NSDictionary*) attributes;
+- (NSDictionary*) getUserTrackingAttributes;
 - (void)setUserTrackingString:(NSString*)value forKey:(NSString*)key;
 - (void)removeUserTrackingValueForKey:(NSString*)key;
 - (id)getUserTrackingValueForKey:(NSString*)key;
