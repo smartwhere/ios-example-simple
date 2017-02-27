@@ -47,6 +47,8 @@
 	</array>
 	<key>com.smartwhere.debugLogging</key>
 	<true/>
+	<key>limitBLERanging</key>
+	<true/>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
