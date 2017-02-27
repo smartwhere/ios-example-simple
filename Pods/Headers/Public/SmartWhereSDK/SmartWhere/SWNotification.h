@@ -1,0 +1,1 @@
+../../../../SmartWhereSDK/SmartWhereSDK/SmartWhere.framework/Versions/A/Headers/SWNotification.h
